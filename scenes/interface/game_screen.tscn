@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2l4svsdn5nhn"]
+
+[ext_resource type="Theme" uid="uid://dti8vwajgajm5" path="res://scenes/interface/game_ui_theme.tres" id="1_vlmer"]
+[ext_resource type="PackedScene" uid="uid://cadinpk8qwq4k" path="res://scenes/interface/tools_panel.tscn" id="2_8ac76"]
+[ext_resource type="PackedScene" uid="uid://d1w5g0gsua4ds" path="res://scenes/interface/inventory_panel.tscn" id="3_j7baf"]
+[ext_resource type="PackedScene" uid="uid://835qu48tntq7" path="res://scenes/interface/timer_panel.tscn" id="4_k1qkq"]
+
+[node name="GameScreen" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vlmer")
+
+[node name="InventoryPanel" parent="MarginContainer" instance=ExtResource("3_j7baf")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="ToolsPanel" parent="MarginContainer" instance=ExtResource("2_8ac76")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="TimerPanel" parent="MarginContainer" instance=ExtResource("4_k1qkq")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://835qu48tntq7"]
+
+[ext_resource type="Theme" uid="uid://dti8vwajgajm5" path="res://scenes/interface/game_ui_theme.tres" id="1_sckht"]
+
+[node name="TimerPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_sckht")
+
+[node name="TimePanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(50, 26)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_right = 35.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_type_variation = &"TimeCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="TimePanel"]
+layout_mode = 2
+
+[node name="TimeLabel" type="Label" parent="TimePanel/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"TimeCounterLabel"
+text = "02:00"
