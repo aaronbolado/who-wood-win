@@ -1,0 +1,14 @@
+TileMapLayer
+Node
+CollisionShape2D
+AnimatedSprite2D
+Node2D
+NavigationRegion2D
+Label
+MarginContainer
+PanelContainer
+TileMap
+TextureRect
+VBoxContainer
+CanvasLayer
+Button
